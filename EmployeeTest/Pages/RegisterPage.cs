@@ -15,64 +15,78 @@ namespace ViditureTest.Pages
     class RegisterPage : BasePage
     {
 
-        [FindsBy(How = How.Name, Using = "fullname")]
+        [FindsBy(How = How.Name, Using = "fullname")]     
         public IWebElement txtFullname { get; set; }
 
         [FindsBy(How = How.Name, Using = "regemail")]
         public IWebElement txtEmail { get; set; }
 
-        [FindsBy(How = How.Name, Using = "passwored")]
+        [FindsBy(How = How.Name, Using = "password")]
         public IWebElement txtPassword { get; set; }
-
 
         [FindsBy(How = How.Name, Using = "confirmpassword")]
         public IWebElement txtConfirmPassword { get; set; }
       
-
         [FindsBy(How = How.Name, Using = "compname")]
         public IWebElement txtCompanyName { get; set; }
 
 
         //dropdown select regnubemp
         // get the select element itself
-        //https://seleniumhq.github.io/selenium/docs/api/dotnet/
 
-        [FindsBy(How = How.Name, Using = "regnubemp")]
 
-       
-        public SelectElement dropdownIndustry { get; set; }
+        //  [FindsBy(How = How.Name, Using = "regnubemp")]   
+        // public IWebElement dropdownIndustry { get; set; }
+
+
+
+        SelectElement selectIndustry; // = new SelectElement(DriverContext.Driver.FindElement(By.Name("regnubemp")));
 
         [FindsBy(How = How.Name, Using = "agreeterms")]
         public IWebElement ckhTerm { get; set; }
 
 
-        [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-normal-btn.vd-btn-big")]
+        [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-confirm-btn")]
         public IWebElement btnCreatAccount { get; set; }
 
       
         public void inputRegisterInfo()
         {
-            txtFullname.SendKeys("Nancy Stone");
-            txtEmail.SendKeys("viditure.test1@gmail.com");
-            txtPassword.SendKeys("vidituretest1");
-            txtConfirmPassword.SendKeys("vidituretest1");
-            txtCompanyName.SendKeys("Test Company 1");
-            dropdownIndustry.SelectByIndex(2);
+            DriverContext.Driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(1000));
+            if (txtFullname.Displayed)
+            {
+                txtFullname.SendKeys("Nancy Stone");
+            }
+           
+            txtEmail.SendKeys("viditure.test3@gmail.com");
+            txtPassword.SendKeys("vidituretest3");
+            txtConfirmPassword.SendKeys("vidituretest3");
+            txtCompanyName.SendKeys("Test Company 3");
+
+
+           if ( DriverContext.Driver.FindElement(By.Name("regnubemp")).Displayed)
+            {
+                selectIndustry  = new SelectElement(DriverContext.Driver.FindElement(By.Name("regnubemp")));
+            }
+
+
+           selectIndustry.SelectByIndex(2);
             ckhTerm.Click();
 
         }
 
         public void clickCreateAccount()
         {
-
-            btnCreatAccount.Click();
-
+            if (btnCreatAccount.Enabled)
+            {
+                btnCreatAccount.Click();
+            }
         }
 
         public void Register()
         {
             inputRegisterInfo();
-            clickCreateAccount();
+           clickCreateAccount();
         }
 
     }

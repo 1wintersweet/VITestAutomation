@@ -13,26 +13,24 @@ namespace ViditureTest
     {
         string url = "https://dev.viditure.com/UIFW/#/";
 
-        private IWebDriver _driver;
+        //[TestMethod]
+        //public void TestLogin()
+        //{
+        //    DriverContext.Driver = new FirefoxDriver();
+        //    DriverContext.Driver.Navigate().GoToUrl(url);
+        //    Login();
+        //}
 
-        [TestMethod]
-        public void TestLogin()
-        {
-            DriverContext.Driver = new FirefoxDriver();
-            DriverContext.Driver.Navigate().GoToUrl(url);
-            Login();
-        }
-
-        public void Login()
-        {
-            HomePage homePage = new HomePage();
-            LoginPage loginPage = homePage.ClickLoginLink();
+        //public void Login()
+        //{
+        //    HomePage homePage = new HomePage();
+        //    LoginPage loginPage = homePage.ClickLoginLink();
           
-            //Unit test should only consume the page object's methods instead of directly access object itself.
-            //  loginPage.lnkLogin.Click();
-            loginPage.Login("ge_zhang@hotmail.com", "Password!23");
+        //    //Unit test should only consume the page object's methods instead of directly access object itself.
+        //    //  loginPage.lnkLogin.Click();
+        //    loginPage.Login("ge_zhang@hotmail.com", "Password!23");
 
-        }
+        //}
 
         [TestMethod]
         public void TestRegister()
@@ -45,6 +43,7 @@ namespace ViditureTest
         {
             HomePage homePage = new HomePage();
             RegisterPage registerPage = homePage.ClickTryForFreeLink();
+            registerPage.Register();
         }
 
 
