@@ -3,7 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
-namespace EmployeeTest
+using ViditureTest.Pages;
+
+namespace ViditureTest
 {
     [TestClass]
     public class UnitTest1
@@ -17,13 +19,14 @@ namespace EmployeeTest
         {
             _driver = new FirefoxDriver();
             _driver.Navigate().GoToUrl(url);
-          
+            Login();
         }
 
-        public void ClickLoginLink()
+
+        public void Login()
         {
-            _driver.FindElement(By.LinkText(("login").ToUpper())).Click();
-          
+            HomePage homePage = new HomePage();
+            homePage.lnkLogin.Click();
 
         }
     }
