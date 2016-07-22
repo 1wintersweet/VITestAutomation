@@ -8,7 +8,7 @@ namespace EmployeeTest
     [TestClass]
     public class UnitTest1
     {
-        string url = "https://dev.viditure.com/beta";
+        string url = "https://dev.viditure.com/UIFW";
 
         private IWebDriver _driver;
 
@@ -17,12 +17,12 @@ namespace EmployeeTest
         {
             _driver = new FirefoxDriver();
             _driver.Navigate().GoToUrl(url);
-            ClickLoginLink();
+          
         }
 
         public void ClickLoginLink()
         {
-            _driver.FindElement(By.LinkText("Login")).Click();
+            _driver.FindElement(By.LinkText(("login").ToUpper())).Click();
           
 
         }
