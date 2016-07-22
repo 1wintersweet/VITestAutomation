@@ -5,15 +5,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VIAutoFramework.Base;
 
 namespace ViditureTest.Pages
 {
-    class LoginPage
+    class LoginPage : BasePage
     {
-        public LoginPage(IWebDriver driver)
-        {
-            PageFactory.InitElements(driver, this);
-        }
+        //public LoginPage(IWebDriver driver) 
+        //    :base(driver)
+        //{
+           
+        //}
 
         // Objects for the login page
         [FindsBy(How = How.Name, Using = "email")]
