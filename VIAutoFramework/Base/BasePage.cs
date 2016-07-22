@@ -15,7 +15,7 @@ namespace VIAutoFramework.Base
      
         public BasePage()
         {
-            PageFactory.InitElements(DriverContext.Driver, this);
+             (DriverContext.Driver, this);
         }
 
 
