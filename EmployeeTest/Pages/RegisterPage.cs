@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VIAutoFramework.Base;
 
-namespace EmployeeTest.Pages
+namespace EmployeeTest.Pages 
 {
-    class RegisterPage
+    class RegisterPage : BasePage
     {
+
+
     }
 }

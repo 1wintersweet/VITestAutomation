@@ -14,10 +14,14 @@ namespace ViditureTest.Pages
     // login link to next login page
     class HomePage : BasePage
     {
-        public HomePage(IWebDriver driver) :base(driver)
-        {
+
+        // the constructor is only used to pass the webdriver instance.
+        // Now base page has the driver/page initialization we can remove page object contructor
+        //public HomePage(IWebDriver driver) 
+        //    :base(driver)
+        //{
            
-        }
+        //}
 
         // Objects for the home page
         [FindsBy(How = How.LinkText, Using = "OUR STORY")]

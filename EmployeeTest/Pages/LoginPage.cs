@@ -26,5 +26,24 @@ namespace ViditureTest.Pages
 
         [FindsBy(How = How.CssSelector, Using = ".vd-btn, .vd-confirm-btn, .vd-btn-big")]
         public IWebElement btnLogin { get; set; }
+
+        [FindsBy(How = How.CssSelector, Using = ".vd-btn, .vd-confirm-btn, .vd-btn-big")]
+        public IWebElement lnkLogin { get; set; }
+
+        // login page performs the login operation so place the function here
+        // Login and Click login are keyword driven framework in this case.
+        // The function names are self explanatory in what operations they refer to. 
+        public void Login(string email, string password)
+        {
+            txtPassword.SendKeys(email);
+            txtEmail.SendKeys(password);
+            btnLogin.Submit();
+          
+        }
+
+        public void ClickLoginLink()
+        {
+            lnkLogin.Click();
+        }
     }
 }

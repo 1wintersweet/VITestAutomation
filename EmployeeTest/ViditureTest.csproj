@@ -64,11 +64,18 @@
   <ItemGroup>
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
+    <Compile Include="Pages\RegisterPage.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VIAutoFramework\VIAutoFramework.csproj">
+      <Project>{8a8dfcbe-a60c-4cfa-a7ac-774dca4201dc}</Project>
+      <Name>VIAutoFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
