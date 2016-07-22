@@ -3,3 +3,7 @@ c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework
 c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\obj\Debug\VIAutoFramework.csprojResolveAssemblyReference.cache
 c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\obj\Debug\VIAutoFramework.dll
 c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\obj\Debug\VIAutoFramework.pdb
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\bin\Debug\WebDriver.dll
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\bin\Debug\WebDriver.Support.dll
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\bin\Debug\WebDriver.xml
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\bin\Debug\WebDriver.Support.xml

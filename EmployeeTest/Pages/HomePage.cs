@@ -36,7 +36,7 @@ namespace ViditureTest.Pages
         [FindsBy(How = How.TagName, Using = "iframe")]
         public IWebElement iframeVIdeo { get; set; }
 
-        [FindsBy(How = How.LinkText, Using = "LOGIN")]
+        [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-normal-btn")]
         public IWebElement lnkLogin { get; set; }
         
     }

@@ -24,10 +24,10 @@ namespace ViditureTest.Pages
         [FindsBy(How = How.Name, Using = "passwored")]
         public IWebElement txtPassword { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = ".vd-btn, .vd-confirm-btn, .vd-btn-big")]
+        [FindsBy(How = How.XPath, Using = "//button[@type='submit']")]
         public IWebElement btnLogin { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = ".vd-btn, .vd-confirm-btn, .vd-btn-big")]
+        [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-normal-btn")]
         public IWebElement lnkLogin { get; set; }
 
         // login page performs the login operation so place the function here
@@ -35,8 +35,8 @@ namespace ViditureTest.Pages
         // The function names are self explanatory in what operations they refer to. 
         public void Login(string email, string password)
         {
-            txtPassword.SendKeys(email);
-            txtEmail.SendKeys(password);
+            txtPassword.SendKeys(password);
+            txtEmail.SendKeys(email);
             btnLogin.Submit();
           
         }

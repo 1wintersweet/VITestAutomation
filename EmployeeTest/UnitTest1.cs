@@ -23,7 +23,6 @@ namespace ViditureTest
             Login();
         }
 
-
         public void Login()
         {
             //HomePage homePage = new HomePage();
