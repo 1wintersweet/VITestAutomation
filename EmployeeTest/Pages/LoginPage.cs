@@ -27,9 +27,7 @@ namespace ViditureTest.Pages
         [FindsBy(How = How.XPath, Using = "//button[@type='submit']")]
         public IWebElement btnLogin { get; set; }
 
-        [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-normal-btn")]
-        public IWebElement lnkLogin { get; set; }
-
+ 
         // login page performs the login operation so place the function here
         // Login and Click login are keyword driven framework in this case.
         // The function names are self explanatory in what operations they refer to. 
@@ -37,13 +35,8 @@ namespace ViditureTest.Pages
         {
             txtPassword.SendKeys(password);
             txtEmail.SendKeys(email);
-            btnLogin.Submit();
-          
+            btnLogin.Submit();          
         }
 
-        public void ClickLoginLink()
-        {
-            lnkLogin.Click();
-        }
     }
 }

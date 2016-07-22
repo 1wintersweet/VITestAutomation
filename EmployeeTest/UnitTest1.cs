@@ -16,7 +16,7 @@ namespace ViditureTest
         private IWebDriver _driver;
 
         [TestMethod]
-        public void Test1()
+        public void TestLogin()
         {
             DriverContext.Driver = new FirefoxDriver();
             DriverContext.Driver.Navigate().GoToUrl(url);
@@ -25,14 +25,28 @@ namespace ViditureTest
 
         public void Login()
         {
-            //HomePage homePage = new HomePage();
-            //homePage.lnkLogin.Click();
-            LoginPage loginPage = new LoginPage();
+            HomePage homePage = new HomePage();
+            LoginPage loginPage = homePage.ClickLoginLink();
+          
             //Unit test should only consume the page object's methods instead of directly access object itself.
             //  loginPage.lnkLogin.Click();
-            loginPage.ClickLoginLink();
-            loginPage.Login("dfdf", "dfdfdfd");
+            loginPage.Login("ge_zhang@hotmail.com", "Password!23");
 
         }
+
+        [TestMethod]
+        public void TestRegister()
+        {
+            DriverContext.Driver = new FirefoxDriver();
+            DriverContext.Driver.Navigate().GoToUrl(url);
+            Register();
+        }
+        public void Register()
+        {
+            HomePage homePage = new HomePage();
+            RegisterPage registerPage = homePage.ClickTryForFreeLink();
+        }
+
+
     }
 }

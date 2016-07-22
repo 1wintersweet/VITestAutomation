@@ -38,6 +38,23 @@ namespace ViditureTest.Pages
 
         [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-normal-btn")]
         public IWebElement lnkLogin { get; set; }
-        
+
+        [FindsBy(How = How.CssSelector, Using = "button.vd-btn.vd-confirm-btn")]
+        public IWebElement lnkRegister { get; set; }
+
+
+        public LoginPage ClickLoginLink()
+        {
+            lnkLogin.Click();
+            return new LoginPage();
+        }
+
+        public RegisterPage ClickTryForFreeLink()
+        {
+            lnkRegister.Click();
+            return new RegisterPage();
+        }
+
+
     }
 }
