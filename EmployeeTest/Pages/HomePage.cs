@@ -13,6 +13,12 @@ namespace ViditureTest.Pages
     // login link to next login page
     class HomePage
     {
+        public HomePage(IWebDriver driver)
+        {
+            PageFactory.InitElements(driver, this);
+        }
+
+        // Objects for the home page
         [FindsBy(How = How.LinkText, Using = "OUR STORY")]
         public IWebElement lnkOurStory { get; set; }
 

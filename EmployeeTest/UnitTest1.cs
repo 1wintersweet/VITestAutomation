@@ -27,9 +27,9 @@ namespace ViditureTest
         {
             //HomePage homePage = new HomePage();
             //homePage.lnkLogin.Click();
-            LoginPage loginPage = new LoginPage();
-            loginPage.txtEmail.SendKeys("ge_zhang@hotmail.com");
-            loginPage.txtPassword.SendKeys("Password!23");
+            LoginPage loginPage = new LoginPage(_driver);
+            loginPage.txtEmail.SendKeys("ge_zhom");
+            loginPage.txtPassword.SendKeys("P");
             loginPage.btnLogin.Submit();
         }
     }

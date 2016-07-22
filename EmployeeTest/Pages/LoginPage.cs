@@ -10,7 +10,12 @@ namespace ViditureTest.Pages
 {
     class LoginPage
     {
+        public LoginPage(IWebDriver driver)
+        {
+            PageFactory.InitElements(driver, this);
+        }
 
+        // Objects for the login page
         [FindsBy(How = How.Name, Using = "email")]
         public IWebElement txtEmail { get; set; }
 
