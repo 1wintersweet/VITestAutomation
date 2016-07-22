@@ -5,17 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VIAutoFramework.Base;
 
 namespace ViditureTest.Pages
 {
 
     // Home page contains various static links and content
     // login link to next login page
-    class HomePage
+    class HomePage : BasePage
     {
-        public HomePage(IWebDriver driver)
+        public HomePage(IWebDriver driver) :base(driver)
         {
-            PageFactory.InitElements(driver, this);
+           
         }
 
         // Objects for the home page
