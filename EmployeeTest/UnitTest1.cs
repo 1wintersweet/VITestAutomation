@@ -9,7 +9,7 @@ using VIAutoFramework.Base;
 namespace ViditureTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest1 : Base
     {
         string url = "https://dev.viditure.com/UIFW/#/";
 
@@ -35,17 +35,22 @@ namespace ViditureTest
         [TestMethod]
         public void TestRegister()
         {
+
             DriverContext.Driver = new FirefoxDriver();
+            DriverContext.Driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(10000));
             DriverContext.Driver.Navigate().GoToUrl(url);
+
+
             Register();
         }
         public void Register()
         {
             HomePage homePage = new HomePage();
-            RegisterPage registerPage = homePage.ClickTryForFreeLink();
-            registerPage.Register();
+            // use current page
+            CurrentPage = homePage.ClickTryForFreeLink();
+            //  RegisterPage registerPage = homePage.ClickTryForFreeLink();
+           // cast the current page to RegisterPage
+            ((RegisterPage)CurrentPage).Register();
         }
-
-
     }
 }

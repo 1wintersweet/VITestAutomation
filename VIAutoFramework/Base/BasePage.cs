@@ -10,7 +10,7 @@ namespace VIAutoFramework.Base
 {
 
     // This class is the base for all Viditure page object classes
-   public abstract class BasePage
+   public abstract class BasePage : Base
     {
      
         public BasePage()

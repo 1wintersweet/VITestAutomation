@@ -52,16 +52,16 @@ namespace ViditureTest.Pages
       
         public void inputRegisterInfo()
         {
-            DriverContext.Driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(1000));
+
             if (txtFullname.Displayed)
             {
-                txtFullname.SendKeys("Nancy Stone");
+                txtFullname.SendKeys("John Paul");
             }
            
-            txtEmail.SendKeys("viditure.test3@gmail.com");
-            txtPassword.SendKeys("vidituretest3");
-            txtConfirmPassword.SendKeys("vidituretest3");
-            txtCompanyName.SendKeys("Test Company 3");
+            txtEmail.SendKeys("viditure.test4@gmail.com");
+            txtPassword.SendKeys("vidituretest4");
+            txtConfirmPassword.SendKeys("vidituretest4");
+            txtCompanyName.SendKeys("Test Company 4");
 
 
            if ( DriverContext.Driver.FindElement(By.Name("regnubemp")).Displayed)
@@ -79,7 +79,7 @@ namespace ViditureTest.Pages
         {
             if (btnCreatAccount.Enabled)
             {
-                btnCreatAccount.Click();
+              btnCreatAccount.Click();
             }
         }
 
