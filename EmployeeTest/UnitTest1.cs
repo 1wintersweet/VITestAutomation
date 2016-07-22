@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
 using ViditureTest.Pages;
+using VIAutoFramework.Base;
 
 namespace ViditureTest
 {
@@ -17,8 +18,8 @@ namespace ViditureTest
         [TestMethod]
         public void Test1()
         {
-            _driver = new FirefoxDriver();
-            _driver.Navigate().GoToUrl(url);
+            DriverContext.Driver = new FirefoxDriver();
+            DriverContext.Driver.Navigate().GoToUrl(url);
             Login();
         }
 
@@ -27,10 +28,12 @@ namespace ViditureTest
         {
             //HomePage homePage = new HomePage();
             //homePage.lnkLogin.Click();
-            LoginPage loginPage = new LoginPage(_driver);
-            loginPage.txtEmail.SendKeys("ge_zhom");
-            loginPage.txtPassword.SendKeys("P");
-            loginPage.btnLogin.Submit();
+            LoginPage loginPage = new LoginPage();
+            //Unit test should only consume the page object's methods instead of directly access object itself.
+            //  loginPage.lnkLogin.Click();
+            loginPage.ClickLoginLink();
+            loginPage.Login("dfdf", "dfdfdfd");
+
         }
     }
 }
