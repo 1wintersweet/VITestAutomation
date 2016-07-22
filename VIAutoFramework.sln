@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VIAutoFramework", "VIAutoFramework\VIAutoFramework.csproj", "{8A8DFCBE-A60C-4CFA-A7AC-774DCA4201DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViditureTest", "EmployeeTest\ViditureTest.csproj", "{213C5839-52BC-42ED-816B-3427AA0E913E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A8DFCBE-A60C-4CFA-A7AC-774DCA4201DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8DFCBE-A60C-4CFA-A7AC-774DCA4201DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8DFCBE-A60C-4CFA-A7AC-774DCA4201DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8DFCBE-A60C-4CFA-A7AC-774DCA4201DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213C5839-52BC-42ED-816B-3427AA0E913E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213C5839-52BC-42ED-816B-3427AA0E913E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213C5839-52BC-42ED-816B-3427AA0E913E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213C5839-52BC-42ED-816B-3427AA0E913E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\bin\Debug\VIAutoFramework.dll
+c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\bin\Debug\VIAutoFramework.pdb
+c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\obj\Debug\VIAutoFramework.csprojResolveAssemblyReference.cache
+c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\obj\Debug\VIAutoFramework.dll
+c:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\VIAutoFramework\obj\Debug\VIAutoFramework.pdb
