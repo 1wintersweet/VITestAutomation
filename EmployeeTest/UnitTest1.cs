@@ -10,7 +10,7 @@ namespace ViditureTest
     [TestClass]
     public class UnitTest1
     {
-        string url = "https://dev.viditure.com/UIFW";
+        string url = "https://dev.viditure.com/UIFW/#/";
 
         private IWebDriver _driver;
 
@@ -25,9 +25,12 @@ namespace ViditureTest
 
         public void Login()
         {
-            HomePage homePage = new HomePage();
-            homePage.lnkLogin.Click();
-
+            //HomePage homePage = new HomePage();
+            //homePage.lnkLogin.Click();
+            LoginPage loginPage = new LoginPage();
+            loginPage.txtEmail.SendKeys("ge_zhang@hotmail.com");
+            loginPage.txtPassword.SendKeys("Password!23");
+            loginPage.btnLogin.Submit();
         }
     }
 }
