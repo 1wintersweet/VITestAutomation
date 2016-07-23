@@ -26,5 +26,7 @@ namespace VIAutoFramework.Base
             }
         }
 
+       public static Browser Browser { get; set; }
+
     }
 }

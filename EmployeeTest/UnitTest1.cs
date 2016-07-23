@@ -5,6 +5,8 @@ using OpenQA.Selenium.Firefox;
 
 using ViditureTest.Pages;
 using VIAutoFramework.Base;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.IE;
 
 namespace ViditureTest
 {
@@ -12,13 +14,40 @@ namespace ViditureTest
     public class UnitTest1 : Base
     {
         string url = "https://dev.viditure.com/UIFW/#/";
+       // public void OpenBrowser(Browser.BrowserType browserType = BrowserType.FireFox) -> pass the default value so we can remove the default case below;
+        public void OpenBrowser(Browser.BrowserType browserType)
+
+        {
+            switch (browserType)
+            {
+                case Browser.BrowserType.Chrome:
+                    DriverContext.Driver = new ChromeDriver();
+                    DriverContext.Browser = new Browser(DriverContext.Driver);
+                    break;
+                case Browser.BrowserType.FireFox:
+                    DriverContext.Driver = new FirefoxDriver();
+                    DriverContext.Browser = new Browser(DriverContext.Driver);
+                    break;
+                case Browser.BrowserType.InternetExplorer:
+                    DriverContext.Driver = new InternetExplorerDriver();
+                    DriverContext.Browser = new Browser(DriverContext.Driver);
+                    break;
+                default:
+                    DriverContext.Driver = new FirefoxDriver();
+                    DriverContext.Browser = new Browser(DriverContext.Driver);
+                    break;
+            }
+        }
 
         [TestMethod]
         public void TestLogin()
         {
-            DriverContext.Driver = new FirefoxDriver();
+            OpenBrowser(Browser.BrowserType.FireFox);
             DriverContext.Driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(100));
-            DriverContext.Driver.Navigate().GoToUrl(url);
+            DriverContext.Browser.GoToUrl(url);
+            //DriverContext.Driver = new FirefoxDriver();
+          
+            //DriverContext.Driver.Navigate().GoToUrl(url);
             Login();
         }
 
@@ -37,7 +66,7 @@ namespace ViditureTest
             CurrentPage =  CurrentPage.As<HomePage>().ClickLoginLink();
 
             CurrentPage = GetInstance<LoginPage>(); 
-            CurrentPage.As<LoginPage>().Login("dff", "dfdf");
+            CurrentPage.As<LoginPage>().Login("ge_zhang@hotmail.com", "Password!23");
 
         }
 
