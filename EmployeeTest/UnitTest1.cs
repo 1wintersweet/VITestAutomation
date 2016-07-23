@@ -66,7 +66,7 @@ namespace ViditureTest
             CurrentPage =  CurrentPage.As<HomePage>().ClickLoginLink();
 
             CurrentPage = GetInstance<LoginPage>(); 
-            CurrentPage.As<LoginPage>().Login("ge_zhang@hotmail.com", "Password!23");
+            CurrentPage.As<LoginPage>().Login("sdsdsd", "ereeer");
 
         }
 
