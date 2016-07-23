@@ -15,7 +15,7 @@ namespace VIAutoFramework.Base
      
         public BasePage()
         {
-             (DriverContext.Driver, this);
+           
         }
 
 

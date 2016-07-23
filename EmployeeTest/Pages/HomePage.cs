@@ -52,7 +52,7 @@ namespace ViditureTest.Pages
         public RegisterPage ClickTryForFreeLink()
         {
             lnkRegister.Click();
-            return new RegisterPage();
+            return  GetInstance<RegisterPage>();
         }
 
 
