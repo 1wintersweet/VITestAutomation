@@ -4,6 +4,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 
 using ViditureTest.Pages;
+using VIAutoFramework.Helpers;
 using VIAutoFramework.Base;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
@@ -43,8 +44,11 @@ namespace ViditureTest
         public void TestLogin()
         {
             OpenBrowser(Browser.BrowserType.FireFox);
+            LogHelpers.CreateLogFile();
+
             DriverContext.Driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(100));
             DriverContext.Browser.GoToUrl(url);
+            LogHelpers.Write("opened browser!");
             //DriverContext.Driver = new FirefoxDriver();
           
             //DriverContext.Driver.Navigate().GoToUrl(url);
@@ -63,6 +67,7 @@ namespace ViditureTest
             // use CurrentPage approach
 
             CurrentPage = GetInstance<HomePage>(); // this function initialize a LoginPage instance and return it;
+            LogHelpers.Write("we are in home page here browser!");
             CurrentPage =  CurrentPage.As<HomePage>().ClickLoginLink();
 
             CurrentPage = GetInstance<LoginPage>(); 
@@ -90,6 +95,7 @@ namespace ViditureTest
             //  RegisterPage registerPage = homePage.ClickTryForFreeLink();
             // go to RegisterPage
              CurrentPage.As<RegisterPage>().Register();
+
         }
     }
 }
