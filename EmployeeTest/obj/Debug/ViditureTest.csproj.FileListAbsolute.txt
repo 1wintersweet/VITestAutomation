@@ -10,3 +10,7 @@ C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework
 C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\WebDriver.Support.xml
 C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\VIAutoFramework.dll
 C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\VIAutoFramework.pdb
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\Excel.dll
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\Excel.pdb
+C:\Users\gzhang.Enterprise\Documents\Visual Studio 2015\Projects\VIAutoFramework\EmployeeTest\bin\Debug\Data\Login.xlsx

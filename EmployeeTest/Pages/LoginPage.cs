@@ -32,9 +32,9 @@ namespace ViditureTest.Pages
         // Login and Click login are keyword driven framework in this case.
         // The function names are self explanatory in what operations they refer to. 
         public void Login(string email, string password)
-        {
-            txtPassword.SendKeys(password);
+        {        
             txtEmail.SendKeys(email);
+            txtPassword.SendKeys(password);
             btnLogin.Submit();          
         }
 

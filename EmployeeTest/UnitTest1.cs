@@ -43,9 +43,11 @@ namespace ViditureTest
         [TestMethod]
         public void TestLogin()
         {
-            OpenBrowser(Browser.BrowserType.FireFox);
+         
             LogHelpers.CreateLogFile();
 
+            OpenBrowser(Browser.BrowserType.FireFox);
+     
             DriverContext.Driver.Manage().Timeouts().ImplicitlyWait(new TimeSpan(100));
             DriverContext.Browser.GoToUrl(url);
             LogHelpers.Write("opened browser!");
@@ -57,6 +59,11 @@ namespace ViditureTest
 
         public void Login()
         {
+            string fileName = Environment.CurrentDirectory.ToString() + "\\Data\\Login.xlsx";
+            ExcelHelpers.PopulateInCollectin(fileName);
+
+
+
             //HomePage homePage = new HomePage();
             //LoginPage loginPage = homePage.ClickLoginLink();
 
@@ -70,8 +77,8 @@ namespace ViditureTest
             LogHelpers.Write("we are in home page here browser!");
             CurrentPage =  CurrentPage.As<HomePage>().ClickLoginLink();
 
-            CurrentPage = GetInstance<LoginPage>(); 
-            CurrentPage.As<LoginPage>().Login("sdsdsd", "ereeer");
+            CurrentPage = GetInstance<LoginPage>();
+            CurrentPage.As<LoginPage>().Login(ExcelHelpers.ReadData(1, "email"), ExcelHelpers.ReadData(1, "password"));
 
         }
 
